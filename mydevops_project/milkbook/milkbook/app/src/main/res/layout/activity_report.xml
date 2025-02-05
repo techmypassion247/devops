@@ -1,0 +1,44 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/edt_customer_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Customer ID" />
+
+    <EditText
+        android:id="@+id/edt_customer_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Customer Name" />
+
+    <EditText
+        android:id="@+id/edt_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Date (YYYY-MM-DD)" />
+
+    <Button
+        android:id="@+id/btn_filter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Apply Filter" />
+
+    <ListView
+        android:id="@+id/list_view_report"
+        android:layout_width="match_parent"
+        android:layout_height="385dp" />
+
+    <Button
+        android:id="@+id/btn_print_report"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="16dp"
+        android:text="Print Report" />
+
+</LinearLayout>

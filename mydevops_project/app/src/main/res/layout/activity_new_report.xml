@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <include layout="@layout/toolbar" />
+
+    <!-- Customer ID input -->
+    <TextView
+        android:id="@+id/textCustomerId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Customer ID"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/edt_customer_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="Enter Customer ID" />
+
+    <!-- Name input -->
+    <TextView
+        android:id="@+id/textCustomerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Customer Name"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/edt_customer_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Customer Name"
+        android:inputType="textPersonName" />
+
+    <!-- Date input -->
+    <TextView
+        android:id="@+id/textDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/edt_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Date"
+        android:inputType="date" />
+
+    <!-- Button to get report -->
+    <Button
+        android:id="@+id/btn_filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get Report"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="24dp" />
+
+    <ListView
+        android:id="@+id/list_view_report"
+        android:layout_width="match_parent"
+        android:layout_height="385dp" />
+
+    <Button
+        android:id="@+id/btn_print_report"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="16dp"
+        android:text="Print Report" />
+
+</LinearLayout>

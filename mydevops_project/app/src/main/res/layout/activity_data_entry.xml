@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="0dp">
+
+    <!-- Include the toolbar -->
+    <include layout="@layout/toolbar" />
+
+    <Spinner
+        android:id="@+id/spinner_customer_id"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:prompt="@string/select_customer_id" />
+
+    <TextView
+        android:id="@+id/tv_customer_name"
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
+        android:text="Name"
+        android:textColor="#6B1CF6" />
+
+    <EditText
+        android:id="@+id/tv_fat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter FAT" />
+
+    <EditText
+        android:id="@+id/tv_weight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Weight" />
+
+    <TextView
+        android:id="@+id/tv_snf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:text="SNF" />
+
+    <TextView
+        android:id="@+id/tv_fat_rate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:text="FAT Rate" />
+
+    <TextView
+        android:id="@+id/tv_snf_rate"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:paddingTop="10dp"
+        android:text="SNF Rate" />
+
+    <TextView
+        android:id="@+id/tv_per_litre"
+        android:layout_width="wrap_content"
+        android:layout_height="34dp"
+        android:text="Per Litre: 0.0" />
+
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Result: 0.0" />
+
+    <Button
+        android:id="@+id/btn_calculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:text="Calculate" />
+
+    <Button
+        android:id="@+id/btn_save_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:text="Save" />
+
+</LinearLayout>

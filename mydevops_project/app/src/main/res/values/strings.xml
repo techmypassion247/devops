@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">milkbook</string>
+    <string name="select_customer_id">Select Customer ID</string>
+</resources>
