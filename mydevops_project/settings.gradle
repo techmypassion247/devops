@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "milkbook"
+rootProject.name = "probook"
 include ':app'
