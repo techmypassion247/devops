@@ -16,6 +16,8 @@ resource "aws_instance" "web" {
   subnet_id     = "subnet-0310b7d86993a61af"
   associate_public_ip_address = true
 
+  user_data = file("${path.module}/userdata.tpl")
+
   tags = {
     Name = "Terraform-Server"
   }
