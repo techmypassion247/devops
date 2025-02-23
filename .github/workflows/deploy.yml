@@ -30,4 +30,4 @@ jobs:
         run: terraform plan -target=aws_instance.web
 
       - name: Terraform Apply (Only EC2 Changes)
-        run: terraform apply -target=aws_instance.my_instance -auto-approve
+        run: terraform apply -target=aws_instance.web -auto-approve
