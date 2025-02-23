@@ -1,7 +1,8 @@
 resource "aws_security_group" "dove_sg" {
   name        = "dove-sg"
   description = "Security group for Dove application"
-  vpc_id      = "vpc-0738906e3996d9fa1"  # Replace with your VPC ID
+  # vpc_id      = "vpc-0738906e3996d9fa1"  
+  # Replace with your VPC ID
 
   # Ingress Rules (Inbound)
   ingress {
@@ -50,6 +51,7 @@ resource "aws_security_group" "dove_sg" {
   }
 
   lifecycle {
-    ignore_changes = [tags]  # Only ignore tag changes, not entire resource
+    prevent_destroy = true  # Prevent Terraform from deleting it
+    ignore_changes  = all   # Ignore any manual changes
   }
 }
