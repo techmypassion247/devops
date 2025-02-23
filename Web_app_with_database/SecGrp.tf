@@ -4,6 +4,10 @@ resource "aws_security_group" "dove-sg" {
   tags = {
     Name = "dove-sg"
   }
+
+  lifecycle {
+    ignore_changes = all  # Prevent Terraform from modifying or recreating this resource
+  }
 }
 
 resource "aws_vpc_security_group_ingress_rule" "sshfromyIP" {

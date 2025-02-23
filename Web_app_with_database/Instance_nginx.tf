@@ -14,6 +14,10 @@ resource "aws_instance" "nginx" {
     Name    = "aws-webserver"
     Project = "aws-server"
   }
+
+  lifecycle {
+    ignore_changes = all  # Prevent Terraform from modifying or recreating this resource
+  }
 }
 
 resource "aws_ec2_instance_state" "web-state" {
