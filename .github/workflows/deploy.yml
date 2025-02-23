@@ -23,8 +23,11 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
 
-      - name: Terraform Plan
-        run: terraform plan
+      - name: Terraform Init
+        run: terraform init
 
-      - name: Terraform Apply
-        run: terraform apply -auto-approve
+      - name: Terraform Plan
+        run: terraform plan -target=aws_instance.web
+
+      - name: Terraform Apply (Only EC2 Changes)
+        run: terraform apply -target=aws_instance.my_instance -auto-approve
