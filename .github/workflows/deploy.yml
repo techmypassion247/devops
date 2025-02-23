@@ -34,7 +34,7 @@ jobs:
       - name: Terraform Plan
         run: |
           cd Web_app_with_database
-          terraform Plan
+          terraform plan
      
       - name: Terraform Apply
         run: |
