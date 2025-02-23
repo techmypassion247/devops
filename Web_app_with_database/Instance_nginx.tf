@@ -11,7 +11,7 @@ resource "aws_instance" "nginx" {
 
 
   tags = {
-    Name    = "aws-web-server"
+    Name    = "aws-webserver"
     Project = "aws-server"
   }
 }
