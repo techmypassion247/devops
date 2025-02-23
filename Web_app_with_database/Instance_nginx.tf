@@ -7,11 +7,11 @@ resource "aws_instance" "nginx" {
   subnet_id                   = "subnet-0310b7d86993a61af"
   associate_public_ip_address = true
 
-  user_data = file("${path.module}/userdata_mysql.tpl")
+  user_data = file("${path.module}/userdata.tpl")
 
 
   tags = {
-    Name    = "aws-mysql"
+    Name    = "aws-web-server"
     Project = "aws-server"
   }
 }

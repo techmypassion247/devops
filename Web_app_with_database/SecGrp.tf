@@ -22,6 +22,14 @@ resource "aws_vpc_security_group_ingress_rule" "allow_http" {
   to_port           = 80
 }
 
+resource "aws_vpc_security_group_ingress_rule" "allow_mysql" {
+  security_group_id = aws_security_group.dove-sg.id
+  cidr_ipv4         = "0.0.0.0/0"
+  from_port         = 3306
+  ip_protocol       = "tcp"
+  to_port           = 3306
+}
+
 resource "aws_vpc_security_group_egress_rule" "allowAllOutbound_ipv4" {
   security_group_id = aws_security_group.dove-sg.id
   cidr_ipv4         = "0.0.0.0/0"
