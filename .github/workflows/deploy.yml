@@ -34,9 +34,9 @@ jobs:
       - name: Terraform Plan
         run: |
           cd Web_app_with_database
-          terraform plan
+          terraform plan -target=aws_instance.nginx -auto-approve
      
       - name: Terraform Apply
         run: |
           cd Web_app_with_database
-          terraform apply -auto-approve
+          terraform apply -target=aws_instance.nginx -auto-approve
