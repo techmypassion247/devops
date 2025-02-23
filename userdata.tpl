@@ -4,7 +4,6 @@ runcmd:
   - sudo apt install nginx -y
   - sudo systemctl start nginx
   - sudo systemctl enable nginx
-<<<<<<< HEAD
   - sudo apt update
   - sudo apt install php -y
   - sudo apt install php-fpm -y
@@ -19,9 +18,7 @@ runcmd:
   - sudo cp -r prj01/1802_php/* /var/www/html/
   - sudo systemctl restart nginx
   - sudo systemctl restart php8.1-fpm
-=======
   - wget -o https://www.tooplate.com/download/2110_character
   - sudo unzip 2110_character -d projects
   - sudo cp -r projects/2110_character/* /var/www/html/
   - sudo systemctl restart nginx
->>>>>>> 8a47d2b (add new project)
