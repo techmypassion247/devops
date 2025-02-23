@@ -50,6 +50,6 @@ resource "aws_security_group" "dove_sg" {
   }
 
   lifecycle {
-    ignore_changes = [tags]  # Only ignore tag changes, not entire resource
+    ignore_changes = all  # Only ignore tag changes, not entire resource
   }
 }
