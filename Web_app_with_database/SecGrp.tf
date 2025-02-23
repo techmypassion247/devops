@@ -51,6 +51,7 @@ resource "aws_security_group" "dove_sg" {
   }
 
   lifecycle {
-    ignore_changes = all  # Only ignore tag changes, not entire resource
+    prevent_destroy = true  # Prevent Terraform from deleting it
+    ignore_changes  = all   # Ignore any manual changes
   }
 }
