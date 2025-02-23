@@ -31,6 +31,12 @@ jobs:
           cd Web_app_with_database
           terraform init
 
+      - name: find security_grp
+        run: aws ec2 describe-security-groups --filters "Name=group-name,Values=dove-sg" --query "SecurityGroups[*].GroupId" --output text
+      
+      - name: import security_grp
+        run: terraform import aws_security_group.dove_sg sg-0982c2b36b03c7152 
+
       - name: Terraform Plan
         run: |
           cd Web_app_with_database

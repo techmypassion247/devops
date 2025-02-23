@@ -2,7 +2,7 @@ resource "aws_instance" "nginx" {
   ami                         = data.aws_ami.amiID.id
   instance_type               = "t2.micro"
   key_name                    = "awskey"
-  vpc_security_group_ids      = [aws_security_group.dove-sg.id]
+  vpc_security_group_ids      = [aws_security_group.dove-sg]
   availability_zone           = "us-east-1a"
   subnet_id                   = "subnet-0310b7d86993a61af"
   associate_public_ip_address = true
